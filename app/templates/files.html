@@ -3,9 +3,11 @@
 {% block main %}
 {% include 'flash_messages.html' %}
 
-<h1 class="page-header">Files</h1>
+<h1 class="page-header">Images</h1>
 
-<ul>
+<div class="wrapper">
+
+
     <!--{{images}}-->
     <!--
     {% for image in images %}
@@ -16,11 +18,12 @@
    
    {% for file in images %}
         {% if file.endswith(('jpg','png','jpeg','JPG','PNG','JPEG')) %}
-            <li><img src="{{ url_for('static', filename='uploads/'+file) }}"></img></li>
+            <img src="{{ url_for('static', filename='uploads/'+file) }}"></img>
         {% endif %}
     {% endfor %}
     
-</ul>
+
+</div>
 
 
 {% endblock %}

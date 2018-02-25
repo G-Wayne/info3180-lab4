@@ -33,6 +33,7 @@ def about():
 def upload():
     if not session.get('logged_in'):
         abort(401)
+        
 
     # Instantiate your form class
     photoForm = UploadForm()
