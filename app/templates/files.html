@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block main %}
+{% include 'flash_messages.html' %}
+
+<h1 class="page-header">Files</h1>
+
+<ul>
+    <!--{{images}}-->
+    <!--
+    {% for image in images %}
+            <li><img src="{{ url_for('static', filename='uploads/'+image) }}"></img></li>
+        
+    {% endfor %}
+   -->
+   
+   {% for file in images %}
+        {% if file.endswith(('jpg','png','jpeg','JPG','PNG','JPEG')) %}
+            <li><img src="{{ url_for('static', filename='uploads/'+file) }}"></img></li>
+        {% endif %}
+    {% endfor %}
+    
+</ul>
+
+
+{% endblock %}

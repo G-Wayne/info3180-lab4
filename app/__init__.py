@@ -1,6 +1,8 @@
 from flask import Flask
 
 # Config Values
+# location where file uploads will be stored
+UPLOAD_FOLDER = './app/static/uploads'
 USERNAME = 'admin'
 PASSWORD = 'password123'
 
